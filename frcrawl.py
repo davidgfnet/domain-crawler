@@ -39,7 +39,7 @@ class BM():
     for i in range(xcoord, xcoord+size):
       self._bm[i] = True
   def check(self, xcoord, size, maxoverlap):
-    if xcoord + size >= len(self._bm): return False
+    if xcoord + size > len(self._bm): return False
     for i in range(xcoord+maxoverlap, xcoord+size-maxoverlap):
       if self._bm[i]:
         return False

@@ -7,11 +7,13 @@ cd    tmp.es/
 wget -l 1  --no-directories -A pdf -r  "http://www.dominios.es/dominios/es/todo-lo-que-necesitas-saber/estadisticas"
 echo "" > all.txt
 
-for file in *
+for file in *.pdf
 do
+	echo "Convert $file"
 	pdftotext "$file" "$file.txt"
 	rm "$file"
 	if [ -f "$file.txt" ]; then
+		echo "Parsing $file.txt"
 		../parser.py "es,com.es,org.es,nom.es,gob.es,edu.es" "$file.txt" >> all.txt
 	fi
 done
