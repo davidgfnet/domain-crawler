@@ -2,7 +2,7 @@
 
 BP=`pwd`
 
-mkdir -p results/
+mkdir -p results-gen/
 rm -rf tmp.generated/
 mkdir tmp.generated/
 cd    tmp.generated/
@@ -34,7 +34,7 @@ $BP/digger/digger < Dictionaries/domains.txt > domains-filtered.txt
 
 cd ..
 
-cat tmp.generated/domains-filtered.txt | sort | uniq | gzip -9 > results/generated.txt.gz
+cat tmp.generated/domains-filtered.txt | sort | uniq | gzip -9 > results-gen/generated.txt.gz
 
 rm -rf tmp.generated
 
