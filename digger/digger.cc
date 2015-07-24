@@ -14,7 +14,7 @@
  * without express or implied warranty.
  */
 
-#define MAX_INFLIGHT 300
+#define MAX_INFLIGHT 30
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -27,8 +27,8 @@
 
 #include <ares.h>
 
-const char * dns_servers[10] = { "209.244.0.3", "209.244.0.4", "8.8.8.8", "8.8.4.4", "4.2.2.1", "4.2.2.2", "4.2.2.3", "4.2.2.4", "208.67.222.222", "208.67.220.220" };
-struct in_addr dns_servers_addr[10];
+const char * dns_servers[6] = { "209.244.0.3", "209.244.0.4", "8.8.8.8", "8.8.4.4", "208.67.222.222", "208.67.220.220" };
+struct in_addr dns_servers_addr[6];
 
 int inflight = 0;
 
