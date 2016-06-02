@@ -4,7 +4,8 @@ mkdir -p results
 mkdir tmp.fr/
 cd    tmp.fr/
 
-wget -l 1  --no-directories -A gif -r  "http://www.afnic.fr/data/divers/public/publication-quotidienne-img/"
+# Get all GIF images
+../fr.download.py
 
 cd ../
 
