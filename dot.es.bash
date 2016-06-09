@@ -10,7 +10,7 @@ echo "" > all.txt
 for file in *.pdf
 do
 	echo "Convert $file"
-	pdftotext "$file" "$file.txt"
+	pdftotext -nopgbrk "$file" "$file.txt"
 	rm "$file"
 	if [ -f "$file.txt" ]; then
 		echo "Parsing $file.txt"
