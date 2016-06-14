@@ -18,8 +18,8 @@ do
 	fi
 done
 
-sort all.txt > all.sorted.txt
-cat all.sorted.txt | uniq | gzip -9 > ../results/dot.es.txt.gz
+LC_ALL=C sort -u all.txt > all.sorted.txt
+cat all.sorted.txt | gzip -9 > ../results/dot.es.txt.gz
 
 cd ..
 rm -rf tmp.es

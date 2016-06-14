@@ -14,7 +14,7 @@ do
 	./frcrawl.py $file >> tmp.fr/all.txt
 done
 
-cat tmp.fr/all.txt | sort | uniq | gzip -9 > results/dot.fr.txt.gz
+LC_ALL=C sort -u tmp.fr/all.txt | gzip -9 > results/dot.fr.txt.gz
 
 rm -rf tmp.fr
 

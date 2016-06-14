@@ -34,7 +34,7 @@ $BP/digger/digger < Dictionaries/domains.txt > domains-filtered.txt
 
 cd ..
 
-cat tmp.generated/domains-filtered.txt | sort | uniq | gzip -9 > results-gen/generated.txt.gz
+sort -u tmp.generated/domains-filtered.txt | gzip -9 > results-gen/generated.txt.gz
 
 rm -rf tmp.generated
 
