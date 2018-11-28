@@ -4,7 +4,7 @@ mkdir -p results/
 mkdir tmp.es/
 cd    tmp.es/
 
-wget -l 1  --no-directories -A pdf -r  "http://www.dominios.es/dominios/es/todo-lo-que-necesitas-saber/estadisticas"
+wget -l 1  --no-directories -A pdf -r  "https://www.dominios.es/dominios/es/todo-lo-que-necesitas-saber/estadisticas"
 echo "" > all.txt
 
 for file in *.pdf
